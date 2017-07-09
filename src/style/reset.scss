@@ -1,0 +1,74 @@
+@import "fn";
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  font-family: PingFang, 苹方, -apple-system, "SF UI Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  font-size: 28px!important;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html,body,.root,.c-page{
+  height: 100%;
+}
+
+a{
+  text-decoration:none;
+}
+ul{
+  list-style:none;
+}
+i{
+  font-style: normal;
+}
+
+.back-btn{
+  @include bg(url('./images/back.png'),130px,75px);
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+.back-btn.yellow{
+  @include bg(url('./images/back_y.png'),180px,97px);
+  bottom: 0px;
+  right: 0px;
+}
+.animate{
+  .leftToRight{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  .scaleBigger{
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  .scaleSmaller{
+    opacity: 0;
+    transform: scale(2);
+  }
+  .downToUp{
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  .upToDown{
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  .opacityOut{
+    opacity: 0;
+  }
+}
+.leftToRight,.scaleBigger,.downToUp,.upToDown,.opacityOut{
+  opacity:1;
+  transition:transform 500ms,opacity 200ms;
+}
