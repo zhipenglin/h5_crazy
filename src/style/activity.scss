@@ -134,7 +134,7 @@
     .main{
       @include bg(url('./images/3-3/main_3-3.png'),720px,749px);
       position: absolute;
-      bottom:0;
+      top:600px;
       left:0;
     }
     .header{
