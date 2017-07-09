@@ -39,7 +39,7 @@ function start(){
     },{
         name:'video',
         options:{
-            time:3000
+            time:30000
         }
     },{
         name:'girl',
