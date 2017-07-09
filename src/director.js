@@ -5,7 +5,6 @@ export default function director(sequence){
         item.options=Object.assign({},item.options);
         promise=promise.then(()=>{
             return new Promise((resolve,reject)=>{
-                console.log(item.name);
                 new Page(item.name,Object.assign({},item.options,{
                     callback(...args){
                         if(item.options.callback){
