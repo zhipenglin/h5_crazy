@@ -61,7 +61,7 @@ module.exports={
                 test:   /\.scss/,
                 use: ExtractTextPlugin.extract({
                     fallback: "style-loader",
-                    use: ["css-loader","px2rem-loader?remUnit=72",'autoprefixer-loader', "sass-loader"],
+                    use: ["css-loader","px2rem-loader?remUnit=75",'autoprefixer-loader', "sass-loader"],
                     publicPath: distPath
                 })
             },{
