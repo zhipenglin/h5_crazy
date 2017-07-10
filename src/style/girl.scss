@@ -22,7 +22,7 @@
     }
   }
   &__up{
-    @include bg(url('./images/up.png'),82px,355px);
+    @include bg(url('./images/up-next.png'),82px,355px);
     transform: translateY(-40px);
     position: relative;
   }

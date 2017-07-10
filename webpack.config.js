@@ -6,8 +6,8 @@ const path=require('path');
 const nodeENV=process.env.NODE_ENV || 'development';
 const isProd = nodeENV === 'production';
 
-const sourcePath = path.join(__dirname, './src');
-const distPath = path.join(__dirname, './dist');
+const sourcePath = path.join(__dirname, './src/');
+const distPath = path.join(__dirname, './dist/');
 
 const plugins=[
     new HtmlWebpackPlugin({template:'./index.html'}),
@@ -53,16 +53,14 @@ module.exports={
                 test:   /\.css/,
                 use: ExtractTextPlugin.extract({
                     fallback: "style-loader",
-                    use: "css-loader",
-                    publicPath: distPath
+                    use: "css-loader"
                 })
             },
             {
                 test:   /\.scss/,
                 use: ExtractTextPlugin.extract({
                     fallback: "style-loader",
-                    use: ["css-loader","px2rem-loader?remUnit=72",'autoprefixer-loader', "sass-loader"],
-                    publicPath: distPath
+                    use: ["css-loader","px2rem-loader?remUnit=72",'autoprefixer-loader', "sass-loader"]
                 })
             },{
                 test:/\.(png|jpg|svg|gif)$/,
@@ -93,5 +91,9 @@ module.exports={
         ]
     },
     devtool: isProd ? 'source-map' : 'eval',
-    plugins:plugins
+    plugins:plugins,
+    devServer:{
+        host:'0.0.0.0',
+        disableHostCheck: true
+    }
 };

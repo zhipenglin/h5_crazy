@@ -10,24 +10,24 @@
     display: block;
   }
   &.page-01{
-    background: url('./images/01/bg_01.png') #f2d322 no-repeat;
+    background: url('./images/bg_01.png') #f2d322 no-repeat;
     background-size:100%;
     padding-top: 60px;
     .coo{
-      @include bg(url('./images/01/coo.png'),720px,648px);
+      @include bg(url('./images/coo.png'),720px,648px);
       position: absolute;
       left: 0;
       top:0;
     }
     .main{
-      @include bg(url('./images/01/main_01.png'),720px,708px);
+      @include bg(url('./images/main_01.png'),720px,708px);
     }
     .title{
-      @include bg(url('./images/01/title_01.png'),423px,126px);
+      @include bg(url('./images/title_01.png'),423px,126px);
       margin: -80px auto;
     }
     .footer{
-      @include bg(url('./images/01/footer_01.png'),720px,404px);
+      @include bg(url('./images/footer_01.png'),720px,404px);
       position: absolute;
       left: 0;
       bottom:0;
@@ -48,7 +48,7 @@
     }
   }
   &.page-02{
-    background: url('./images/02/bg_02.png') #f2d322 no-repeat;
+    background: url('./images/bg_02.png') #f2d322 no-repeat;
     background-size:100%;
     padding-top: 450px;
     .button{
@@ -65,7 +65,7 @@
     }
   }
   &.page-3-1{
-    background: url('./images/3-1/bg_3-1.png') #f2d322 no-repeat;
+    background: url('./images/bg_3-1.png') #f2d322 no-repeat;
     background-size: 100% 100%;
     padding-top: 250px;
     .p-content{
@@ -99,7 +99,7 @@
     }
   }
   &.page-3-2{
-    background: url('./images/3-2/bg_3-2.png') #f2d322 no-repeat;
+    background: url('./images/bg_3-2.png') #f2d322 no-repeat;
     background-size:100%;
     img{
       position: absolute;
@@ -132,13 +132,13 @@
   &.page-3-3{
     background: #f0d223;
     .main{
-      @include bg(url('./images/3-3/main_3-3.png'),720px,749px);
+      @include bg(url('./images/main_3-3.png'),720px,749px);
       position: absolute;
       top:600px;
       left:0;
     }
     .header{
-      @include bg(url('./images/3-3/header_3-3.png'),720px,242px);
+      @include bg(url('./images/header_3-3.png'),720px,242px);
     }
     .title{
       color:#771d86;
@@ -153,26 +153,26 @@
       margin-top: 40px;
     }
     .img_01{
-      @include bg(url('./images/3-3/img_01.png'),246px,323px);
+      @include bg(url('./images/img_01.png'),246px,323px);
       @include position(0,600px);
     }
     .img_02{
-      @include bg(url('./images/3-3/img_02.png'),365px,359px);
+      @include bg(url('./images/img_02.png'),365px,359px);
       @include position(160px,540px);
     }
     .img_03{
-      @include bg(url('./images/3-3/img_03.png'),244px,244px);
+      @include bg(url('./images/img_03.png'),244px,244px);
       @include position(400px,700px);
     }
   }
   &.page-3-4{
     background: #f0d223;
     .header{
-      @include bg(url('./images/3-4/header_3-4.png'),720px,418px);
+      @include bg(url('./images/header_3-4.png'),720px,418px);
       height: 310px;
     }
     .title{
-      @include bg(url('./images/3-4/header_3-4.png'),720px,418px);
+      @include bg(url('./images/header_3-4.png'),720px,418px);
       background-position: bottom;
       height: 108px;
     }
@@ -181,11 +181,11 @@
       font-size: 24px;
     }
     .middle{
-      @include bg(url('./images/3-4/middle_3-4.png'),720px,528px);
+      @include bg(url('./images/middle_3-4.png'),720px,528px);
       margin-top: 40px;
     }
     .footer{
-      @include bg(url('./images/3-4/footer_3-4.png'),422px,131px);
+      @include bg(url('./images/footer_3-4.png'),422px,131px);
       position: absolute;
       left: 0;
       bottom: 0;
@@ -194,15 +194,15 @@
   &.page-3-5{
     background: #512660;
     .up{
-      @include bg(url('./images/3-5/up.png'),720px,711px);
+      @include bg(url('./images/up.png'),720px,711px);
       background-color: #f0d223;
     }
     .down{
-      @include bg(url('./images/3-5/down.png'),720px,569px);
+      @include bg(url('./images/down.png'),720px,569px);
     }
   }
   &.page-3-6{
-    background:url('./images/3-6/bg.png') no-repeat #f0d223;
+    background:url('./images/bg.png') no-repeat #f0d223;
     background-size: 100%;
     padding-top: 420px;
     .des{
@@ -212,7 +212,7 @@
       text-indent: 2em;
     }
     .list{
-      @include bg(url('./images/3-6/list.png'),569px,519px);
+      @include bg(url('./images/list.png'),569px,519px);
       margin: 20px auto 0;
     }
   }

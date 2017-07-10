@@ -1,2 +1,0 @@
-webpackJsonp([8],{"./pages/video.ejs":function(e,i){e.exports=function(e){var i="";return i+='<video class="p-video" x-webkit-airplay="true" autoplay="" webkit-playsinline="true" preload="auto" playsinline="true" src="../image/video.mp4"></video>'}}});
-//# sourceMappingURL=8.js.map

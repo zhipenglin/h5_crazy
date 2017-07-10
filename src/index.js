@@ -2,6 +2,7 @@ import './lib/flexible'
 import $ from 'jquery'
 import FastClick from 'fastclick'
 import director from './director'
+import enableInlineVideo from 'iphone-inline-video';
 
 document.addEventListener('DOMContentLoaded', function() {
     FastClick.attach(document.body);
@@ -39,6 +40,9 @@ function start(){
     },{
         name:'video',
         options:{
+            callback($page){
+                enableInlineVideo($page.find('video')[0]);
+            },
             time:30000
         }
     },{
@@ -46,7 +50,9 @@ function start(){
         options:{
             callback($page){
                 return new Promise((resolve)=>{
-                    $page.on('touchend touchcancel',(e)=>{
+                    $page.on('touchstart',(e)=>{
+                        e.preventDefault();
+                    }).on('touchend touchcancel',(e)=>{
                         e.preventDefault();
                         return resolve();
                     });
