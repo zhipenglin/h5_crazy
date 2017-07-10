@@ -14,6 +14,10 @@ const tplList={
     activity,friends,girl,index,video
 };
 
+var video_=document.createElement('video');
+video_.setAttribute('src','../image/video.mp4');
+video_.load();
+
 export default class Page{
     constructor(name,options={}){
         this.name=name;

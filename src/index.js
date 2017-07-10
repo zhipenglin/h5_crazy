@@ -41,9 +41,22 @@ function start(){
         name:'video',
         options:{
             callback($page){
-                enableInlineVideo($page.find('video')[0]);
-            },
-            time:30000
+                return new Promise((reslove)=>{
+                    let video=$page.find('video')[0];
+                    enableInlineVideo(video);
+                    video.play();
+                    let timer=setTimeout(()=>{
+                        reslove();
+                    },30000);
+                    video.onload=function(){
+                        clearTimeout(timer);
+                    };
+                    video.onended=function(){
+                        reslove();
+                    }
+                });
+
+            }
         }
     },{
         name:'girl',
