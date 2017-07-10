@@ -3,6 +3,7 @@ import $ from 'jquery'
 import FastClick from 'fastclick'
 import director from './director'
 import enableInlineVideo from 'iphone-inline-video';
+import Page from './Page'
 
 document.addEventListener('DOMContentLoaded', function() {
     FastClick.attach(document.body);
@@ -101,7 +102,9 @@ function start(){
         }
     }]);
 }
-
-start();
+(function(){
+    var $page=new Page('activity');
+})();
+//start();
 
 

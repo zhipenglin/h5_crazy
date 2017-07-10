@@ -134,7 +134,7 @@
     .main{
       @include bg(url('./images/main_3-3.png'),720px,749px);
       position: absolute;
-      top:600px;
+      bottom:0;
       left:0;
     }
     .header{
@@ -145,6 +145,14 @@
       font-size: 34px;
       font-weight: bolder;
       padding: 0 40px;
+    }
+    .transform{
+      transform: scale(0.8);
+      position: absolute;
+      bottom: 0;
+      .img_01,.img_02,.img_03{
+        transform: translateY(-1300px);
+      }
     }
     .des{
       font-size: 26px;
@@ -162,7 +170,7 @@
     }
     .img_03{
       @include bg(url('./images/img_03.png'),244px,244px);
-      @include position(400px,700px);
+      @include position(400px,600px);
     }
   }
   &.page-3-4{
@@ -193,6 +201,14 @@
   }
   &.page-3-5{
     background: #512660;
+    .transform{
+      transform: scale(0.9);
+      transform-origin: top;
+    }
+    .transform-up{
+      background-color: #f0d223;
+      height: 650px;
+    }
     .up{
       @include bg(url('./images/up.png'),720px,711px);
       background-color: #f0d223;
