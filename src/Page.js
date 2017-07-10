@@ -30,6 +30,13 @@ export default class Page{
     init(){
         this.render();
     }
+    start(){
+        if(this.$page){
+            $('.c-page').hide();
+            this.$page.show();
+        }
+        this.options.callback&&this.options.callback(this.$page);
+    }
     render(){
         if(this.options.selfAdaption){
             window.lib.flexible.refreshRem();
@@ -38,9 +45,8 @@ export default class Page{
         }
         let tpl=tplList[this.name];
         if(tpl){
-            let $page=$(`<div class="c-page">${tpl(this.data)}</div>`);
-            $('.root').html($page);
-            this.options.callback&&this.options.callback($page);
+            this.$page=$(`<div class="c-page" style="display: none;">${tpl(this.data)}</div>`);
+            $('.root').append(this.$page);
         }
     }
 }

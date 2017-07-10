@@ -2,11 +2,11 @@ import './lib/flexible'
 import $ from 'jquery'
 import FastClick from 'fastclick'
 import director from './director'
-import enableInlineVideo from 'iphone-inline-video';
-
+import setTitle from './lib/setTitle'
 document.addEventListener('DOMContentLoaded', function() {
     FastClick.attach(document.body);
 }, false);
+
 
 function start(){
     director([{
@@ -21,6 +21,7 @@ function start(){
         options:{
             selfAdaption:false,
             callback($page){
+                setTitle('发现');
                 return new Promise((resolve)=>{
                     let sum=2;
                     let timer=setInterval(()=>{
@@ -43,11 +44,7 @@ function start(){
             callback($page){
                 return new Promise((reslove)=>{
                     let video=$page.find('video')[0];
-                    enableInlineVideo(video);
                     video.play();
-                    document.addEventListener('touchstart',()=>{
-                        video.play();
-                    });
                     let timer=setTimeout(()=>{
                         reslove();
                     },30000);
@@ -68,7 +65,7 @@ function start(){
                 return new Promise((resolve)=>{
                     $page.on('touchstart',(e)=>{
                         e.preventDefault();
-                    }).on('touchend touchcancel',(e)=>{
+                    }).on('touchend touchcancel click',(e)=>{
                         e.preventDefault();
                         return resolve();
                     });
@@ -103,6 +100,13 @@ function start(){
             }
         }
     }]);
+
+    let video=document.getElementById('p-video');
+    video.pause();
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        video.play();
+        video.pause();
+    }, false);
 }
 
 start();
