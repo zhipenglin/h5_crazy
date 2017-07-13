@@ -1,5 +1,9 @@
 @import "reset";
+.video{
+  display: flex;
+  background: #000;
+}
 .p-video{
-  width: 100%;
+  flex: 1;
   display: block;
 }
