@@ -77,6 +77,8 @@ function start(){
         name:'activity',
         options:{
             callback($page){
+                let audio=document.getElementById('p-audio');
+                audio.play();
                 function animate(){
                     $page.addClass('animate');
                     setTimeout(()=>{
@@ -134,11 +136,14 @@ function start(){
     }]);
 
     api.start(/activity\//.test(location.hash)&&'activity');
-    let video=document.getElementById('p-video');
+    let video=document.getElementById('p-video'),audio=document.getElementById('p-audio');
     video.pause();
+    audio.pause();
     document.addEventListener("WeixinJSBridgeReady", function () {
         video.play();
         video.pause();
+        audio.play();
+        audio.pause();
     }, false);
 }
 
