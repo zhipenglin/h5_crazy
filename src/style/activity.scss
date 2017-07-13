@@ -25,6 +25,9 @@
       transform: translateX(-50%);
       animation: up-icon 1s infinite;
     }
+    &:last-child:after{
+      content:normal;
+    }
   }
   &.active{
     display: block;
