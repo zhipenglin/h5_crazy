@@ -8,25 +8,29 @@
   box-sizing: border-box;
   @keyframes up-icon {
     from{
-      transform: translate(-50%,0);
+      transform: translateY(0);
     }
     to{
-      transform: translate(-50%,50px);
+      transform: translateY(50px);
     }
   }
-  &.content-page{
+  .icon-pointer{
+    position: absolute;
+    z-index: 999;
+    left:50%;
+    bottom:100px;
+    transform: translateX(-50%);
     &:after{
       content:'';
       display: block;
-      position: absolute;
-      left:50%;
-      bottom:100px;
       @include bg(url('./images/down-icon.png'),47px,71px);
-      transform: translateX(-50%);
       animation: up-icon 1s infinite;
     }
-    &:last-child:after{
-      content:normal;
+    &.yellow:after{
+      @include bg(url('./images/down-icon_y.png'),47px,71px);
+    }
+    &.up{
+      transform: translateX(-50%) rotate(180deg);
     }
   }
   &.active{
