@@ -89,7 +89,7 @@ function start(){
 
                 function renderHash(){
                     let args=location.hash.match(/activity\/(.*)/);
-                    args[1]&&render(args[1].replace(/_/g,'.'));
+                    args&&args[1]&&render(args[1].replace(/_/g,'.'));
                 }
 
                 function render(targetClass){
